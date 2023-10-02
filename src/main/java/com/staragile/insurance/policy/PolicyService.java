@@ -18,11 +18,7 @@ public class PolicyService {
 	//https://github.com/vilasvarghese/microservices/blob/master/training/day1/SpringBoot/4CompanyServiceImplementation.txt
 	//continue from line : 115
 	public List<Policy> getPolicies(){
-		/*return Arrays.asList(
-			new Policy("1", "Tousif", "Tousif address", "123456789"),
-			new Policy("2", "Yashwant", "Yashwant address", "234567891"),
-			new Policy("3", "Krishna", "Krishna address", "345678912")
-		);*/
+		
 		
 		List<Policy> policyList = new ArrayList<Policy>();
 		policyDAORepository.findAll().forEach(policyList::add);
@@ -46,3 +42,10 @@ public class PolicyService {
 	}
 	
 }
+
+
+/*return Arrays.asList(
+new Policy("1", "Tousif", "Tousif address", "123456789"),
+new Policy("2", "Yashwant", "Yashwant address", "234567891"),
+new Policy("3", "Krishna", "Krishna address", "345678912")
+);*/

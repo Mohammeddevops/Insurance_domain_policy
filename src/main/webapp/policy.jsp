@@ -5,7 +5,7 @@
 <script>
 
 function createPolicy(){
-	alert("inside create ");
+	alert("policy created successfully ");
 	var form = document.getElementById("polcyForm");
 	
 	form.action="createpolicy";
@@ -38,8 +38,76 @@ function deletePolicy(){
 <head>
 <meta charset="ISO-8859-1">
 <title>Hello World web application</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  table th, table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  table th {
+    background-color: #f0f0f0;
+  }
+
+  input[type="submit"],
+  input[type="button"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+   h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #007BFF; /* Change the color to your preference */
+    margin-top: 20px;
+  }
+  
+</style>
+
 </head>
 <body>
+	<h1>Insurance Domain</h1>
    	<form action="addpolicy" id="polcyForm" type="POST">
 
 	<br>

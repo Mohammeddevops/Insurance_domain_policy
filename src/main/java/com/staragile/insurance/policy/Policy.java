@@ -1,5 +1,7 @@
 package com.staragile.insurance.policy;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -14,6 +16,31 @@ public class Policy {
 	String contactNumber;
 	
 	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Policy policy = (Policy) o;
+        return Objects.equals(getPolicyId(), policy.getPolicyId()) &&
+               Objects.equals(getCustomerName(), policy.getCustomerName()) &&
+               Objects.equals(getCustomerAddress(), policy.getCustomerAddress()) &&
+               Objects.equals(getContactNumber(), policy.getContactNumber());
+    }
+	
+	@Override
+	public String toString() {
+	    return "Policy ID: " + getPolicyId() +
+	           ", Customer Name: " + getCustomerName() +
+	           ", Customer Address: " + getCustomerAddress() +
+	           ", Contact Number: " + getContactNumber();
+	}
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getPolicyId(), getCustomerName(), getCustomerAddress(), getContactNumber());
+    }
+    
 	public Policy() {
 		super();
 	}

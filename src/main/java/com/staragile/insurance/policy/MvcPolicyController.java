@@ -27,16 +27,12 @@ public class MvcPolicyController {
 		return "Hello World!!!";
 	}
 	
-	
 	@RequestMapping("/getallpolicy")
 	public String getAllPolicies(HttpServletRequest req, HttpServletResponse res) {
 		List<Policy> policyList = policySvc.getPolicies();
 		req.getSession().setAttribute("policyList", policyList);
 		return "policy.jsp";
 	}
-	
-	
-	
 	
 	@RequestMapping("/createpolicy")
 	public String addPolicy(HttpServletRequest req, HttpServletResponse res) {
@@ -59,8 +55,6 @@ public class MvcPolicyController {
 		policySvc.updatePolicy(req.getParameter("id"),policy);
 		return getAllPolicies(req,res);
 	}
-	
-	
 	
 	@RequestMapping("/deletepolicy")
 	public String deletePolicy(HttpServletRequest req, HttpServletResponse res) {
